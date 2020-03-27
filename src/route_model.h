@@ -12,7 +12,7 @@ class RouteModel : public Model {
   public:
     class Node : public Model::Node {
       public:
-        Node * parent = nullptr;
+        Node *parent = nullptr;
         float h_value = std::numeric_limits<float>::max();
         float g_value = 0.0;
         bool visited = false;

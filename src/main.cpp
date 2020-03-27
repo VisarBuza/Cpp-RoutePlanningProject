@@ -44,7 +44,7 @@ int main(int argc, const char **argv)
     std::vector<std::byte> osm_data;
  
     if( osm_data.empty() && !osm_data_file.empty() ) {
-        std::cout << "Reading OpenStreetMap data from the following file: " <<  osm_data_file << std::endl;
+        std::cout << "Reading OpenStreetMap data from the following file: " <<  osm_data_file << std::endl << std::endl;
         auto data = ReadFile(osm_data_file);
         if( !data )
             std::cout << "Failed to read." << std::endl;
@@ -55,10 +55,10 @@ int main(int argc, const char **argv)
     
     float start_x, start_y, end_x, end_y;
 
-    std::cout << "\nThe starting x coordinate: "; std::cin >> start_x;
-    std::cout << "The starting y coordinate: ";   std::cin >> start_y;
-    std::cout << "The ending x coordinate: ";     std::cin >> end_x;
-    std::cout << "The ending y coordinate: ";     std::cin >> end_y;
+    std::cout << "The starting x coordinate: ";  std::cin >> start_x;
+    std::cout << "The starting y coordinate: ";  std::cin >> start_y;
+    std::cout << "The ending x coordinate: ";    std::cin >> end_x;
+    std::cout << "The ending y coordinate: ";    std::cin >> end_y;
     std::cout << std::endl;
     
     // Build Model.
